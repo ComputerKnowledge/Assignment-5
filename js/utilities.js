@@ -1,6 +1,7 @@
 function takeInput(id) {
   const amount = parseFloat(document.getElementById(id).value);
-  if (!isNaN(amount) && amount > 0) {
+  const balance1 = takeDataFromTag("net-balance");
+  if (!isNaN(amount) && amount > 0 && amount <= balance1) {
     my_modal_1.showModal();
     return amount;
   } else {
@@ -15,7 +16,9 @@ function addDataToElement(id, amount) {
   document.getElementById(id).innerHTML = takeDataFromTag(id) + amount;
   document.getElementById("net-balance").innerHTML =
     takeDataFromTag("net-balance") - amount + " BDT";
-  addToHistory(amount, id);
+  if (amount > 0) {
+    addToHistory(amount, id);
+  }
   const allInput = document.getElementsByTagName("input");
   for (let i = 0; i < allInput.length; i++) {
     document.getElementsByTagName("input")[i].value = "";
