@@ -79,7 +79,11 @@
                 class="p-3 rounded-lg text-center"
                 id="fast-input"
               />
-              <button id="fast-donatenow" class="btn px-10 bg-lime-300">
+              <button
+                id="fast-donatenow"
+                onclick=""
+                class="btn px-10 bg-lime-300"
+              >
                 Donate now
               </button>
             </div>
@@ -123,7 +127,11 @@
                 class="p-3 rounded-lg text-center"
                 id="second-input"
               />
-              <button id="second-donatenow" class="btn px-10 bg-lime-300">
+              <button
+                id="second-donatenow"
+                onclick=""
+                class="btn px-10 bg-lime-300"
+              >
                 Donate now
               </button>
             </div>
@@ -168,7 +176,11 @@
                 class="p-3 rounded-lg text-center"
                 id="third-input"
               />
-              <button id="third-donatenow" class="btn px-10 bg-lime-300">
+              <button
+                id="third-donatenow"
+                onclick=""
+                class="btn px-10 bg-lime-300"
+              >
                 Donate now
               </button>
             </div>
@@ -183,7 +195,23 @@
       <h2 class="text-3xl text-center">Donation history</h2>
       <div id="donation-container"></div>
     </div>
+
     <!-- the history section ends -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-xl font-extrabold">Congrates!</h3>
+        <img src="assets/coin.png" alt="" />
+        <p class="py-4">You Have Donated for Humankind</p>
+        <p class="text-lg font-bold">Successfully</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <!-- the jascript section -->
     <script src="js/utilities.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>

@@ -1,7 +1,7 @@
 function takeInput(id) {
   const amount = parseFloat(document.getElementById(id).value);
   if (!isNaN(amount) && amount > 0) {
-    alert("You have made a donation");
+    my_modal_1.showModal();
     return amount;
   } else {
     alert("Please enter a valid amount");

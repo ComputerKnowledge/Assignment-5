@@ -1,16 +1,19 @@
 document
   .getElementById("fast-donatenow")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     addDataToElement("fast-donation", takeInput("fast-input"));
   });
 document
   .getElementById("second-donatenow")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     addDataToElement("second-donation", takeInput("second-input"));
   });
 document
   .getElementById("third-donatenow")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     addDataToElement("third-donation", takeInput("third-input"));
   });
 document.getElementById("donate-page").addEventListener("click", function () {
